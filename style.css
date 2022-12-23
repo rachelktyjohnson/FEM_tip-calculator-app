@@ -6,4 +6,129 @@
   font-family: "Space Mono", monospace;
 }
 
+body {
+  background: #C5E4E7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+}
+main img#logo {
+  display: block;
+  margin: 50px auto;
+}
+
+form {
+  background: white;
+  border-radius: 10px 10px 0 0;
+  padding: 30px;
+}
+form .in .field-group {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 35px;
+}
+form .in .field-group.bill {
+  position: relative;
+}
+form .in .field-group.bill:after {
+  content: url("images/icon-dollar.svg");
+  position: absolute;
+  top: 40px;
+  left: 15px;
+}
+form .in .field-group.people {
+  position: relative;
+}
+form .in .field-group.people:after {
+  content: url("images/icon-person.svg");
+  position: absolute;
+  top: 40px;
+  left: 15px;
+}
+form .in .field-group label {
+  color: #56726F;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+form .in .field-group input {
+  border: 2px solid #F3F8FB;
+  background: #F3F8FB;
+  border-radius: 5px;
+  outline: 0;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: right;
+  font-size: 1.1rem;
+  color: #00474B;
+}
+form .in .field-group input::placeholder {
+  text-align: right;
+  color: #00474B;
+  opacity: 0.3;
+  font-size: 1.1rem;
+}
+form .in .field-group input:focus, form .in .field-group input:hover {
+  border: 2px solid #26C2AD;
+}
+form .in .field-group .tip-amounts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-gap: 15px;
+}
+form .in .field-group .tip-amounts button {
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  padding: 10px;
+  background: #00474B;
+  color: #E6FEFE;
+  font-size: 1.2rem;
+}
+form .in .field-group .tip-amounts input.tip-amount::placeholder {
+  font-size: 1.2rem;
+  color: #56726F;
+  opacity: 1;
+}
+form .out {
+  background: #00474B;
+  padding: 20px;
+  border-radius: 10px;
+}
+form .out .tip-amount, form .out .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+form .out .tip-amount .money, form .out .total .money {
+  font-size: 2rem;
+  color: #26C2AD;
+}
+form .out .headings h1 {
+  font-size: 1rem;
+  color: #F3F8FB;
+}
+form .out .headings p {
+  font-size: 0.8rem;
+  color: #56726F;
+}
+form .out button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #00474B;
+  background: #26C2AD;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */

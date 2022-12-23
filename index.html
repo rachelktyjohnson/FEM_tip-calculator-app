@@ -12,32 +12,32 @@
 </head>
 <body>
 <main>
-    <img src="images/logo.svg" alt="Splitter"/>
+    <img src="images/logo.svg" id="logo" alt="Splitter"/>
 
     <form>
         <div class="in">
-            <div class="field-group">
+            <div class="field-group bill">
                 <label for="bill">Bill</label>
-                <input type="text" id="bill"/>
+                <input type="text" id="bill" placeholder="0"/>
             </div>
             <div class="field-group">
                 <label>Select Tip %</label>
-                <div class="tip_amounts">
-                    <button data-tip="0.05">5%</button>
-                    <button data-tip="0.1">10%</button>
-                    <button data-tip="0.15">15%</button>
-                    <button data-tip="0.25">25%</button>
-                    <button data-tip="0.50">50%</button>
-                    <button data-tip="custom">Custom</button>
+                <div class="tip-amounts">
+                    <button class="tip-amount" data-tip="0.05">5%</button>
+                    <button class="tip-amount" data-tip="0.1">10%</button>
+                    <button class="tip-amount" data-tip="0.15">15%</button>
+                    <button class="tip-amount" data-tip="0.25">25%</button>
+                    <button class="tip-amount" data-tip="0.50">50%</button>
+                    <input class="tip-amount" placeholder="Custom"/>
                 </div>
             </div>
-            <div class="field-group">
+            <div class="field-group people">
                 <label for="people">Number of people</label>
-                <input type="text" id="people"/>
+                <input type="text" id="people" placeholder="0"/>
             </div>
         </div>
         <div class="out">
-            <div class="tip_amount">
+            <div class="tip-amount">
                 <div class="headings">
                     <h1>Tip Amount</h1>
                     <p>/ person</p>
@@ -51,8 +51,8 @@
                 </div>
                 <p id="total" class="money">$32.79</p>
             </div>
+            <button type="reset">Reset</button>
         </div>
-        <button type="reset">Reset</button>
     </form>
 </main>
 
