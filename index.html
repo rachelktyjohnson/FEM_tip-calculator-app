@@ -29,7 +29,7 @@
                     <button class="tip-amount" data-tip="0.15">15%</button>
                     <button class="tip-amount" data-tip="0.25">25%</button>
                     <button class="tip-amount" data-tip="0.50">50%</button>
-                    <label><input class="tip-amount" placeholder="Custom"/></label>
+                    <label><input class="tip-amount" id="custom-tip" placeholder="Custom"/></label>
                 </div>
             </div>
             <div class="field-group people">
@@ -44,16 +44,16 @@
                     <h1>Tip Amount</h1>
                     <p>/ person</p>
                 </div>
-                <p id="amount" class="money">$0.00</p>
+                <p id="tip-pp" class="money">$0.00</p>
             </div>
             <div class="total">
                 <div class="headings">
                     <h1>Total</h1>
                     <p>/ person</p>
                 </div>
-                <p id="total" class="money">$0.00</p>
+                <p id="total-pp" class="money">$0.00</p>
             </div>
-            <button type="reset" class="active">Reset</button>
+            <button id="btn-reset" type="reset">Reset</button>
         </div>
     </form>
 </main>

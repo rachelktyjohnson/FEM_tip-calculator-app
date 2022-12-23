@@ -158,6 +158,11 @@ form .in .field-group .tip-amounts button.selected {
   color: #00474B;
   background: #26C2AD;
 }
+form .in .field-group .tip-amounts input.tip-amount.selected {
+  border: 2px solid #26C2AD;
+  background: #26C2AD;
+  color: white;
+}
 form .in .field-group .tip-amounts input.tip-amount::placeholder {
   font-size: 1.2rem;
   color: #56726F;
