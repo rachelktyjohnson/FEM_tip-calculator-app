@@ -11,7 +11,7 @@ const custom_tip = document.querySelector("#custom-tip");
 function calculateTotal(){
     if (bill.value && people.value && document.querySelector('.tip-amounts .selected')){
         const tip_amount_selected = document.querySelector('.tip-amounts .selected').dataset.tip;
-        if (tip_amount_selected !== "NaN"){
+        if (tip_amount_selected !== "NaN" && parseInt(people.value) !== 0){
             let tip_amount_pp = (bill.value * tip_amount_selected) / people.value;
             tip_pp.innerText = "$" + tip_amount_pp.toFixed(2);
             let total_amount_pp = (bill.value / people.value) + tip_amount_pp;
@@ -65,14 +65,20 @@ bill.addEventListener('keyup',(e)=>{
 })
 
 people.addEventListener('keyup',(e)=>{
-    if ( isNaN(e.target.value) ){
+
+    document.querySelector('.hint').style.display="none";
+    e.target.classList.remove("error");
+    if (parseInt(e.target.value) === 0) {
+        document.querySelector('.hint').style.display="block";
+        e.target.classList.add("error");
+    } else if ( isNaN(e.target.value) ){
         e.target.value = e.target.value.substring(0, e.target.value.length-1);
     } else {
         calculateTotal();
     }
 })
 
-form.addEventListener('reset',(e)=>{
+form.addEventListener('reset',()=>{
     tip_pp.innerText = "$0.00";
     total_pp.innerText = "$0.00";
 })
