@@ -22,11 +22,29 @@ main img#logo {
   display: block;
   margin: 50px auto;
 }
+@media (min-width: 600px) {
+  main img#logo {
+    margin-top: 0;
+    margin-bottom: 75px;
+  }
+}
+@media (min-width: 600px) {
+  main {
+    max-width: 920px;
+  }
+}
 
 form {
   background: white;
   border-radius: 10px 10px 0 0;
   padding: 30px;
+}
+@media (min-width: 600px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+  }
 }
 form .in .field-group {
   display: flex;
@@ -40,22 +58,34 @@ form .in .field-group.bill {
 form .in .field-group.bill:after {
   content: url("images/icon-dollar.svg");
   position: absolute;
-  top: 40px;
+  top: 45px;
   left: 15px;
 }
 form .in .field-group.people {
   position: relative;
 }
+@media (min-width: 600px) {
+  form .in .field-group.people {
+    margin-bottom: 0;
+  }
+}
 form .in .field-group.people:after {
   content: url("images/icon-person.svg");
   position: absolute;
-  top: 40px;
+  top: 45px;
   left: 15px;
 }
 form .in .field-group label {
   color: #56726F;
   font-size: 0.8rem;
   margin-bottom: 5px;
+}
+form .in .field-group .hint {
+  color: #d3715a;
+  display: none;
+  position: absolute;
+  right: 0;
+  font-size: 0.8rem;
 }
 form .in .field-group input {
   border: 2px solid #F3F8FB;
@@ -74,14 +104,35 @@ form .in .field-group input::placeholder {
   opacity: 0.3;
   font-size: 1.1rem;
 }
+@media (min-width: 600px) {
+  form .in .field-group input::placeholder {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 600px) {
+  form .in .field-group input {
+    font-size: 1.5rem;
+  }
+}
 form .in .field-group input:focus, form .in .field-group input:hover {
   border: 2px solid #26C2AD;
+}
+form .in .field-group input.error {
+  border: 2px solid #d3715a;
 }
 form .in .field-group .tip-amounts {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
   grid-gap: 15px;
+}
+@media (min-width: 600px) {
+  form .in .field-group .tip-amounts {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+form .in .field-group .tip-amounts label {
+  margin: 0;
 }
 form .in .field-group .tip-amounts button {
   border: 0;
@@ -92,15 +143,42 @@ form .in .field-group .tip-amounts button {
   color: #E6FEFE;
   font-size: 1.2rem;
 }
+@media (min-width: 600px) {
+  form .in .field-group .tip-amounts button {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  form .in .field-group .tip-amounts button:hover {
+    background: #41dac5;
+    color: #00474B;
+    cursor: pointer;
+  }
+}
+form .in .field-group .tip-amounts button.selected {
+  color: #00474B;
+  background: #26C2AD;
+}
 form .in .field-group .tip-amounts input.tip-amount::placeholder {
   font-size: 1.2rem;
   color: #56726F;
   opacity: 1;
 }
+@media (min-width: 600px) {
+  form .in .field-group .tip-amounts input.tip-amount::placeholder {
+    font-size: 1.5rem;
+  }
+}
 form .out {
   background: #00474B;
   padding: 20px;
   border-radius: 10px;
+}
+@media (min-width: 600px) {
+  form .out {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 form .out .tip-amount, form .out .total {
   display: flex;
@@ -111,6 +189,11 @@ form .out .tip-amount, form .out .total {
 form .out .tip-amount .money, form .out .total .money {
   font-size: 2rem;
   color: #26C2AD;
+}
+@media (min-width: 600px) {
+  form .out .tip-amount .money, form .out .total .money {
+    font-size: 2.8rem;
+  }
 }
 form .out .headings h1 {
   font-size: 1rem;
@@ -125,10 +208,22 @@ form .out button {
   padding: 15px;
   font-size: 1.2rem;
   color: #00474B;
-  background: #26C2AD;
+  background: #0D686D;
   text-transform: uppercase;
   border: 0;
   border-radius: 5px;
+  cursor: pointer;
+}
+@media (min-width: 600px) {
+  form .out button {
+    margin-top: auto;
+  }
+}
+form .out button.active {
+  background: #26C2AD;
+}
+form .out button.active:hover {
+  background: #41dac5;
 }
 
 /*# sourceMappingURL=style.css.map */

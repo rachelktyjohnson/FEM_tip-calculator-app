@@ -18,6 +18,7 @@
         <div class="in">
             <div class="field-group bill">
                 <label for="bill">Bill</label>
+                <span class="hint">Can't be zero</span>
                 <input type="text" id="bill" placeholder="0"/>
             </div>
             <div class="field-group">
@@ -28,11 +29,12 @@
                     <button class="tip-amount" data-tip="0.15">15%</button>
                     <button class="tip-amount" data-tip="0.25">25%</button>
                     <button class="tip-amount" data-tip="0.50">50%</button>
-                    <input class="tip-amount" placeholder="Custom"/>
+                    <label><input class="tip-amount" placeholder="Custom"/></label>
                 </div>
             </div>
             <div class="field-group people">
                 <label for="people">Number of people</label>
+                <span class="hint">Can't be zero</span>
                 <input type="text" id="people" placeholder="0"/>
             </div>
         </div>
@@ -42,16 +44,16 @@
                     <h1>Tip Amount</h1>
                     <p>/ person</p>
                 </div>
-                <p id="amount" class="money">$4.27</p>
+                <p id="amount" class="money">$0.00</p>
             </div>
             <div class="total">
                 <div class="headings">
                     <h1>Total</h1>
                     <p>/ person</p>
                 </div>
-                <p id="total" class="money">$32.79</p>
+                <p id="total" class="money">$0.00</p>
             </div>
-            <button type="reset">Reset</button>
+            <button type="reset" class="active">Reset</button>
         </div>
     </form>
 </main>
